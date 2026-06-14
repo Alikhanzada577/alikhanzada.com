@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Muhammad Ali - Full Stack Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+   
+    <nav class="navbar">
+        <div class="nav-container">
+            
+            <div class="nav-logo">Muhammad Ali</div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#qualification" class="nav-link">Qualification</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#projects" class="nav-link dropdown-toggle">Projects <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#project-omnicrm" class="dropdown-item">
+                            <div class="dropdown-project">
+                                <img src="./omniCRM.png" alt="OmniCRM">
+                                <div class="dropdown-project-info">
+                                    <h4>OmniCRM Platform</h4>
+                                    <p>Digital Marketing CRM</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#project-trading" class="dropdown-item">
+                            <div class="dropdown-project">
+                                <img src="./quantl.png" alt="Trading App">
+                                <div class="dropdown-project-info">
+                                    <h4>React Native Trading App</h4>
+                                    <p>Published on Android & iOS</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#project-2" class="dropdown-item">
+                            <div class="dropdown-project">
+                                <img src="./zatch.png" alt="Zatch Energy">
+                                <div class="dropdown-project-info">
+                                    <h4>Zatch Energy Drink Website</h4>
+                                    <p>CSS Animations</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact-Me</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Social Links - Fixed at left edge -->
+    <div class="social-links animate-slide-left">
+        <a href="https://www.linkedin.com/in/ali577" class="social-link animate-bounce">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/alikhanzada577" class="social-link animate-bounce" style="animation-delay: 0.2s;">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+    
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="animate-fade-in" style="font-family: 'JetBrains Mono', monospace; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; animation-delay: 0.5s;">$ whoami</div>
+                    <h1 class="animate-slide-up" style="animation-delay: 0.8s;">Hi, I'm <span style="color: var(--accent-color);">Muhammad Ali</span></h1>
+                    <p class="typing-line animate-fade-in" style="animation-delay: 1.2s;">And I <span class="typing-text" id="typed-text"></span><span class="cursor">|</span></p>
+                    <p class="hero-subtitle animate-slide-right" style="animation-delay: 1.5s;">Full Stack Developer <span class="highlight">@<a href="https://www.reddev.us/" target="_blank" class="highlight">Red Dev</a></span>, Remote.</p>
+                   
+                    <div class="code-block animate-slide-up" style="margin: 1.5rem 0; font-size: 0.8rem; animation-delay: 2.1s;">
+                        <div><span class="code-keyword">function</span> <span class="code-function">getSkills</span>() {</div>
+                        <div>&nbsp;&nbsp;<span class="code-keyword">return</span> [<span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'n8n Automation'</span>];</div>
+                        <div>}</div>
+                    </div>
+                    <div class="hero-actions animate-bounce-in" style="animation-delay: 2.5s;">
+                      <a href="#contact" class="cta-button">
+                        <i class="fas fa-terminal"></i> Contact me
+                      </a>
+                      <a href="./Muhammad_Ali_Resume.pdf" download="Muhammad_Ali_Resume.pdf" class="cta-button cta-button-secondary">
+                        <i class="fas fa-download"></i> Download Resume
+                      </a>
+                    </div>
+                </div>
+                  
+            </div>
+           
+              
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-mouse"></i>
+            <span>Scroll down</span>
+            <i class="fas fa-arrow-down"></i>
+        </div>
+    </section>
+
+    
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Full Stack Engineer</h3>
+                    <p>I'm a dedicated <span class="highlight">Full Stack Engineer</span> currently at <a href="https://www.reddev.us/" target="_blank" class="highlight">Red Dev</a> (subsidiary of US company), with prior experience at <span class="highlight">Redbuffer</span> and <span class="highlight">Brainhub Labs</span>. My journey began as an intern and evolved into building enterprise CRMs, AI-powered document platforms, and mobile trading applications across remote teams.</p>
+                    
+                    <p>I specialize in <span class="highlight">React</span>, <span class="highlight">Next.js</span>, <span class="highlight">React Native</span>, and <span class="highlight">Python/FastAPI</span> development, with expertise in state management, API integration, workflow automation, and performance optimization. I've built marketing dashboards, sales CRMs, and full-stack MVPs that improved data processing speed by 30% and reduced manual tasks by 80%.</p>
+                    
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <div class="terminal-dot red"></div>
+                                <div class="terminal-dot yellow"></div>
+                                <div class="terminal-dot green"></div>
+                            </div>
+                            <div class="terminal-title">~/muhammad-ali.dev</div>
+                        </div>
+                        <div class="terminal-content">
+                            <div><span class="code-comment">// Current Focus</span></div>
+                            <div><span class="code-keyword">const</span> <span class="code-function">currentRole</span> = {</div>
+                            <div>&nbsp;&nbsp;position: <span class="code-string">"Frontend Engineer"</span>,</div>
+                            <div>&nbsp;&nbsp;company: <span class="code-string">"Red Dev"</span>,</div>
+                            <div>&nbsp;&nbsp;location: <span class="code-string">"Remote"</span>,</div>
+                            <div>&nbsp;&nbsp;technologies: [<span class="code-string">"React"</span>, <span class="code-string">"Next.js"</span>, <span class="code-string">"FastAPI"</span>],</div>
+                            <div>&nbsp;&nbsp;passions: [<span class="code-string">"Full-Stack Dev"</span>, <span class="code-string">"Automation"</span>]</div>
+                            <div>};</div>
+                            <br>
+                            <div><span class="code-function">console.log</span>(<span class="code-string">"Ready to build amazing things! 🚀"</span>);</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">30%</span>
+                            <span class="stat-label">Performance Boost</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technologies</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Js / Ts</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Tailwind</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Socket.io</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Automation</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">Zapier</span>
+                        <span class="skill-tag">Make.com</span>
+                        <span class="skill-tag">Workflow Automation</span>
+                        <span class="skill-tag">API Integration</span>
+                        <span class="skill-tag">Process Automation</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Libraries</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Material-UI (MUI)</span>
+                        <span class="skill-tag">Shadcn/UI</span>
+                        <span class="skill-tag">Ant Design</span>
+                        <span class="skill-tag">React Native Elements</span>
+                        <span class="skill-tag">React TanStack Query</span>
+                        <span class="skill-tag">ReactNative Gifted Charts</span>
+                        <span class="skill-tag">Chart.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">git</span>
+                        <span class="skill-tag">gitLab</span>
+                        <span class="skill-tag">github</span>
+                        <span class="skill-tag">Vscode</span>
+                        <span class="skill-tag">Thunder Client / PostMan</span>
+                        <span class="skill-tag">Lighthouse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="qualification" class="qualification">
+        <div class="container">
+            <h2 class="section-title">Qualification</h2>
+            <div class="qualification-content">
+                <div class="qualification-tabs">
+                    <div class="qualification-button" data-target="#education">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </div>
+                    <div class="qualification-button qualification-active" data-target="#experience">
+                        <i class="fas fa-briefcase"></i>
+                        Experience
+                    </div>
+                </div>
+
+                <div class="qualification-sections">
+                    <div class="qualification-content-section" id="education">
+                        <div class="qualification-data">
+                            <div>
+                                <h3 class="qualification-title">Bachelor's in Computer Science</h3>
+                                <span class="qualification-subtitle">Bahria University, Islamabad</span>
+                                <div class="qualification-calendar">
+                                    <i class="fas fa-calendar"></i>
+                                    2020 - 2024
+                                </div>
+                                <p class="qualification-education-note">Graduated July 2024</p>
+                            </div>
+                            <div>
+                                <span class="qualification-rounder"></span>
+                                <span class="qualification-line"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qualification-content-section active" id="experience">
+                        <div class="experience-layout">
+                            <div class="experience-list">
+                                <article class="experience-card" data-target="exp-reddev">
+                                    <button type="button" class="experience-card-trigger" aria-selected="false">
+                                        <div class="experience-card-icon"><i class="fas fa-laptop-code"></i></div>
+                                        <div class="experience-card-summary">
+                                            <h3 class="experience-card-title">Frontend Engineer</h3>
+                                            <p class="experience-card-company"><a href="https://www.reddev.us/" target="_blank" class="highlight">Red Dev</a> — Remote</p>
+                                            <p class="experience-card-date"><i class="fas fa-calendar"></i> June 2025 - Present</p>
+                                        </div>
+                                        <span class="experience-card-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                                    </button>
+                                </article>
+
+                                <article class="experience-card is-active" data-target="exp-redbuffer">
+                                    <button type="button" class="experience-card-trigger" aria-selected="true">
+                                        <div class="experience-card-icon"><i class="fas fa-layer-group"></i></div>
+                                        <div class="experience-card-summary">
+                                            <h3 class="experience-card-title">Full Stack Engineer</h3>
+                                            <p class="experience-card-company">Redbuffer — Islamabad</p>
+                                            <p class="experience-card-date"><i class="fas fa-calendar"></i> August 2024 - February 2025</p>
+                                        </div>
+                                        <span class="experience-card-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                                    </button>
+                                </article>
+
+                                <article class="experience-card" data-target="exp-brainhub">
+                                    <button type="button" class="experience-card-trigger" aria-selected="false">
+                                        <div class="experience-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                                        <div class="experience-card-summary">
+                                            <h3 class="experience-card-title">Software Engineer</h3>
+                                            <p class="experience-card-company">Brainhub Labs — Islamabad</p>
+                                            <p class="experience-card-date"><i class="fas fa-calendar"></i> August 2023 - May 2025</p>
+                                        </div>
+                                        <span class="experience-card-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                                    </button>
+                                </article>
+
+                                <article class="experience-card" data-target="exp-intern">
+                                    <button type="button" class="experience-card-trigger" aria-selected="false">
+                                        <div class="experience-card-icon"><i class="fas fa-seedling"></i></div>
+                                        <div class="experience-card-summary">
+                                            <h3 class="experience-card-title">Software Developer Intern</h3>
+                                            <p class="experience-card-company">Brainhub Labs — Islamabad</p>
+                                            <p class="experience-card-date"><i class="fas fa-calendar"></i> February 2023 - July 2023</p>
+                                        </div>
+                                        <span class="experience-card-arrow" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                                    </button>
+                                </article>
+                            </div>
+
+                            <div class="experience-detail">
+                                <article class="experience-detail-panel" id="exp-reddev">
+                                    <header class="experience-detail-header">
+                                        <div class="experience-detail-icon"><i class="fas fa-laptop-code"></i></div>
+                                        <div>
+                                            <h3>Frontend Engineer</h3>
+                                            <p class="experience-detail-company"><a href="https://www.reddev.us/" target="_blank" class="highlight">Red Dev</a> — Remote</p>
+                                            <p class="experience-detail-date"><i class="fas fa-calendar"></i> June 2025 - Present</p>
+                                        </div>
+                                    </header>
+                                    <div class="experience-detail-body">
+                                        <div class="exp-project-accordion">
+                                            <article class="exp-project-item is-open">
+                                                <button type="button" class="exp-project-trigger" aria-expanded="true">
+                                                    <span>OMNI CRM</span>
+                                                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                                </button>
+                                                <div class="exp-project-panel">
+                                                    <div class="exp-project-panel-inner">
+                                                        <p class="experience-project-desc">Marketing platform for Google Ads, Facebook Ads & SEO campaigns.</p>
+                                                        <ul class="experience-details">
+                                                            <li>Integrated Google Ads and Facebook Ads APIs for automated campaign management and real-time analytics.</li>
+                                                            <li>Built dynamic dashboards with interactive charts and configurable filters for multi-channel ROI tracking.</li>
+                                                            <li>Delivered responsive, high-performance UIs with React and Tailwind CSS, reducing page load time.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="exp-project-item">
+                                                <button type="button" class="exp-project-trigger" aria-expanded="false">
+                                                    <span>Verified CRM</span>
+                                                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                                </button>
+                                                <div class="exp-project-panel">
+                                                    <div class="exp-project-panel-inner">
+                                                        <p class="experience-project-desc">Enterprise sales CRM for precious-metals (gold/IRA) businesses.</p>
+                                                        <ul class="experience-details">
+                                                            <li>Built purchase and liquidation sale-order UIs with dynamic metal product tables, pricing calculators, and order validation.</li>
+                                                            <li>Developed agent commission calculators, payroll dashboards, and inventory management with PDF/Excel export via MUI Data Grid Pro.</li>
+                                                            <li>Implemented lead workflow tracking, milestone management, and role-based permissions with Redux Toolkit.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="exp-project-item">
+                                                <button type="button" class="exp-project-trigger" aria-expanded="false">
+                                                    <span>Logical CRM</span>
+                                                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                                </button>
+                                                <div class="exp-project-panel">
+                                                    <div class="exp-project-panel-inner">
+                                                        <p class="experience-project-desc">Enterprise CRM for home-service & field-service businesses.</p>
+                                                        <ul class="experience-details">
+                                                            <li>Developed features across lead management, job dispatch, sale orders, and user admin in a 900+ component React SPA.</li>
+                                                            <li>Built data-heavy reporting screens with MUI Data Grid Pro, Chart.js, and Excel export via ExcelJS.</li>
+                                                            <li>Integrated Google APIs (Gmail, Calendar, Search Console), SMS messaging, and real-time updates via Socket.io.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="experience-detail-panel active" id="exp-redbuffer">
+                                    <header class="experience-detail-header">
+                                        <div class="experience-detail-icon"><i class="fas fa-layer-group"></i></div>
+                                        <div>
+                                            <h3>Full Stack Engineer</h3>
+                                            <p class="experience-detail-company">Redbuffer — Islamabad</p>
+                                            <p class="experience-detail-date"><i class="fas fa-calendar"></i> August 2024 - February 2025</p>
+                                        </div>
+                                    </header>
+                                    <div class="experience-detail-body">
+                                        <div class="exp-project-accordion">
+                                            <article class="exp-project-item is-open">
+                                                <button type="button" class="exp-project-trigger" aria-expanded="true">
+                                                    <span>Oliver AI</span>
+                                                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                                </button>
+                                                <div class="exp-project-panel">
+                                                    <div class="exp-project-panel-inner">
+                                                        <p class="experience-project-desc">Intelligent document & email analysis platform.</p>
+                                                        <ul class="experience-details">
+                                                            <li>Built a full-stack MVP where users upload documents processed to extract clauses and match them against Gmail/Outlook emails via ML outputs.</li>
+                                                            <li>Developed OAuth-based authentication and read-access flows for Gmail and Outlook with periodic re-syncing.</li>
+                                                            <li>Engineered clause-level email grouping linking each document clause to corresponding email threads.</li>
+                                                            <li>Built frontend with Next.js and backend with Python FastAPI and PostgreSQL.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="exp-project-item">
+                                                <button type="button" class="exp-project-trigger" aria-expanded="false">
+                                                    <span>Noble Royalties</span>
+                                                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                                </button>
+                                                <div class="exp-project-panel">
+                                                    <div class="exp-project-panel-inner">
+                                                        <p class="experience-project-desc">Data management platform for oil & gas companies.</p>
+                                                        <ul class="experience-details">
+                                                            <li>Developed a platform for managing macro and micro transaction data across wells, cracks, and sub-units.</li>
+                                                            <li>Built document upload and dynamic spreadsheet creation for bulk-import and manual data entry.</li>
+                                                            <li>Designed scalable PostgreSQL data models for hierarchical site structures and high-volume commodity records.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="experience-detail-panel" id="exp-brainhub">
+                                    <header class="experience-detail-header">
+                                        <div class="experience-detail-icon"><i class="fas fa-mobile-alt"></i></div>
+                                        <div>
+                                            <h3>Software Engineer</h3>
+                                            <p class="experience-detail-company">Brainhub Labs — Islamabad</p>
+                                            <p class="experience-detail-date"><i class="fas fa-calendar"></i> August 2023 - May 2025</p>
+                                        </div>
+                                    </header>
+                                    <div class="experience-detail-body">
+                                        <ul class="experience-details">
+                                            <li>Developed responsive web applications using React, Tailwind CSS, and JavaScript, optimized with Google Lighthouse.</li>
+                                            <li>Integrated RESTful APIs and managed state with Redux Toolkit and TanStack Query, improving data processing speed by 30%.</li>
+                                            <li>Implemented Firebase for real-time data sync and authentication, reducing login latency across client projects.</li>
+                                            <li>Led frontend development of Quantl AI, a React Native trading app with real-time market APIs and Gifted Charts; deployed via TestFlight.</li>
+                                            <li>Designed and built a personal finance app with interactive Chart.js visualizations for income, expense, and budget tracking.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="experience-detail-panel" id="exp-intern">
+                                    <header class="experience-detail-header">
+                                        <div class="experience-detail-icon"><i class="fas fa-seedling"></i></div>
+                                        <div>
+                                            <h3>Software Developer Intern</h3>
+                                            <p class="experience-detail-company">Brainhub Labs — Islamabad</p>
+                                            <p class="experience-detail-date"><i class="fas fa-calendar"></i> February 2023 - July 2023</p>
+                                        </div>
+                                    </header>
+                                    <div class="experience-detail-body">
+                                        <ul class="experience-details">
+                                            <li>Developed responsive UIs from Figma designs using HTML, CSS, and JavaScript with smooth animated transitions.</li>
+                                            <li>Integrated RESTful APIs and collaborated with backend teams on data contracts and Git pull request workflows.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="projects" class="projects">
+        <div class="container" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" id="project-oliver-ai">
+                    <div class="project-image project-image-placeholder">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Oliver AI — Document & Email Analysis Platform</h3>
+                        <p>An AI-powered full-stack platform that ingests documents, extracts clauses using ML models, and matches each clause to relevant Gmail and Outlook email threads. Features OAuth-based email integration, clause-level email grouping, automated summaries, and periodic re-sync as new emails arrive.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Gmail API</span>
+                            <span class="tech-tag">Outlook OAuth</span>
+                            <span class="tech-tag">ML Integration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="project-noble">
+                    <div class="project-image project-image-placeholder">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Noble Royalties — Oil & Gas Data Management</h3>
+                        <p>An operations platform enabling oil and gas companies to manage macro and micro level transaction data across wells, cracks, and sub-units within a dig site. Supports document upload, dynamic spreadsheet creation, bulk data import, and scalable hierarchical data models for high-volume commodity records.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Data Modeling</span>
+                            <span class="tech-tag">Spreadsheet Import</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="project-omnicrm">
+                    <div class="project-image">
+                        <img src="./omniCRM.png" alt="OmniCRM Dashboard">
+                        <div class="project-overlay">
+                            <a href="https://magnetic.omnitrigger.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>OmniCRM - Digital Marketing Management Platform</h3>
+                        <p>A comprehensive CRM platform designed to manage large-scale digital marketing operations across thousands of websites. The system streamlines Google Ads and Facebook Ads campaign management, provides advanced SEO tools, and offers bulk website management capabilities. Built with React and featuring MUI Data Grid Pro for handling massive datasets, integrated with Google and Facebook APIs for seamless campaign automation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">MUI</span>
+                            <span class="tech-tag">Data Grid Pro</span>
+                            <span class="tech-tag">FaceBook & Google Api's</span>
+                            <span class="tech-tag">React TanStack Query</span>
+                            <span class="tech-tag">Redux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="project-automation">
+                    <div class="project-image">
+                        <img src="./n8nProject.jpg" alt="Business Automation Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Business Process Automation Suite</h3>
+                        <p>Comprehensive automation platform built with n8n for streamlining business workflows and processes. Integrated multiple APIs and services to automate data synchronization, email marketing campaigns, lead management, and customer onboarding processes. Reduced manual tasks by 80% and improved operational efficiency across multiple business functions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">Workflow Automation</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Zapier</span>
+                            <span class="tech-tag">Make.com</span>
+                            <span class="tech-tag">Process Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="project-trading">
+                    <div class="project-image">
+                        <img src="./MetaTrader4.webp" alt="Trading Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Trading React Native App</h3>
+                        <p>A complete trading mobile app built using React Native, featuring real-time market data, interactive charts with Gifted Charts, and portfolio management. I developed the entire frontend and integrated TanStack Query for seamless API data handling, alongside Redux for state management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ReactNative</span>
+                            <span class="tech-tag">React Native Gifted Charts</span>
+                            <span class="tech-tag">React TanStack Query</span>
+                            <span class="tech-tag">Redux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="project-2">
+                    <div class="project-image">
+                        <img src="./zatch.png" alt="Animated Shilajit Energy Drink Website">
+                        <div class="project-overlay">
+                            <a href="https://zatchenergy.surge.sh/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Zatch Energy Drink Website</h3>
+                        <p>A dynamic and animated landing page for Zatch Energy, an Indian Shilajit-based energy drink brand. Designed and developed from scratch using HTML, CSS, and JavaScript, with rich, scroll-triggered animations and engaging UI transitions to reflect the brand's bold identity.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Html</span>
+                            <span class="tech-tag">Css</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Animations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="project-3">
+                    <div class="project-image">
+                        <img src="./fiveimpact.png" alt="Five Impact Landing Page">
+                        <div class="project-overlay">
+                            <a href="https://fiveimpact.mp/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Five Impact GTA V Server</h3>
+                        <p>A high-fidelity landing page for a GTA V RP server, fully developed by converting Figma design into responsive frontend code using React and Tailwind CSS. The page features smooth CSS animations and a modern layout that enhances user engagement.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind Css</span>
+                            <span class="tech-tag">Css Animations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container" id="contact-form">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>muhammadali94200@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 335 9298254</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Islamabad, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                  </form>
+                  
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" >
+        <div class="container">
+            <p>&copy; 2024 Muhammad Ali. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
