@@ -2,11 +2,21 @@ document.addEventListener('DOMContentLoaded', function() {
   // Hamburger menu functionality
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
+  const navbar = document.querySelector('.navbar');
+
+  function updateNavHeight() {
+      if (!navbar) return;
+      document.documentElement.style.setProperty('--nav-height', `${navbar.offsetHeight}px`);
+  }
+
+  updateNavHeight();
+  window.addEventListener('resize', updateNavHeight);
   
   if (hamburger && navMenu) {
       hamburger.addEventListener('click', function() {
           this.classList.toggle('active');
           navMenu.classList.toggle('active');
+          updateNavHeight();
           
           if (navMenu.classList.contains('active')) {
               document.body.style.overflow = 'hidden';
@@ -75,9 +85,114 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }
 
-  // Experience — 2-column master/detail switcher
+  // Experience — desktop: 2-column | mobile: inline card accordion
+  const experienceLayout = document.querySelector('.experience-layout');
+  const experienceDetail = document.querySelector('.experience-detail');
   const experienceCards = document.querySelectorAll('.experience-list .experience-card');
   const experiencePanels = document.querySelectorAll('.experience-detail-panel');
+  const EXPERIENCE_MOBILE_BP = 768;
+
+  function isMobileExperience() {
+      return window.innerWidth <= EXPERIENCE_MOBILE_BP;
+  }
+
+  function mountPanelsToDetail() {
+      if (!experienceDetail) return;
+      experiencePanels.forEach(panel => experienceDetail.appendChild(panel));
+  }
+
+  function mountPanelToCard(card, panel) {
+      const slot = card?.querySelector('.experience-card-expand');
+      if (slot && panel) slot.appendChild(panel);
+  }
+
+  function clearExperienceState() {
+      experienceCards.forEach(c => {
+          c.classList.remove('is-active', 'is-expanded');
+          const btn = c.querySelector('.experience-card-trigger');
+          if (btn) btn.setAttribute('aria-selected', 'false');
+      });
+      experiencePanels.forEach(panel => panel.classList.remove('active'));
+  }
+
+  function activateDesktopExperience(card, targetId) {
+      if (experienceLayout) experienceLayout.classList.remove('is-mobile');
+      mountPanelsToDetail();
+      clearExperienceState();
+
+      card.classList.add('is-active');
+      const trigger = card.querySelector('.experience-card-trigger');
+      if (trigger) trigger.setAttribute('aria-selected', 'true');
+
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+          targetPanel.classList.add('active');
+          resetExpProjectAccordion(targetPanel);
+      }
+  }
+
+  function activateMobileExperience(card, targetId, expand) {
+      if (experienceLayout) experienceLayout.classList.add('is-mobile');
+      mountPanelsToDetail();
+      clearExperienceState();
+
+      if (!expand) return;
+
+      card.classList.add('is-active', 'is-expanded');
+      const trigger = card.querySelector('.experience-card-trigger');
+      if (trigger) trigger.setAttribute('aria-selected', 'true');
+
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+          mountPanelToCard(card, targetPanel);
+          targetPanel.classList.add('active');
+          resetExpProjectAccordion(targetPanel);
+      }
+  }
+
+  function syncExperienceLayout() {
+      const activeCard = document.querySelector('.experience-card.is-active')
+          || document.querySelector('.experience-card[data-target="exp-redbuffer"]');
+      if (!activeCard) return;
+
+      const targetId = activeCard.getAttribute('data-target');
+      const shouldExpand = activeCard.classList.contains('is-expanded');
+
+      if (isMobileExperience()) {
+          activateMobileExperience(activeCard, targetId, shouldExpand);
+      } else {
+          activateDesktopExperience(activeCard, targetId);
+      }
+  }
+
+  initExpProjectAccordions(document.getElementById('experience'));
+
+  experienceCards.forEach(card => {
+      const trigger = card.querySelector('.experience-card-trigger');
+      if (!trigger) return;
+
+      trigger.addEventListener('click', () => {
+          const targetId = card.getAttribute('data-target');
+          const isActive = card.classList.contains('is-active');
+          const isExpanded = card.classList.contains('is-expanded');
+
+          if (isMobileExperience()) {
+              const willExpand = !(isActive && isExpanded);
+              activateMobileExperience(card, targetId, willExpand);
+              return;
+          }
+
+          activateDesktopExperience(card, targetId);
+      });
+  });
+
+  syncExperienceLayout();
+
+  let experienceResizeTimer;
+  window.addEventListener('resize', () => {
+      clearTimeout(experienceResizeTimer);
+      experienceResizeTimer = setTimeout(syncExperienceLayout, 150);
+  });
 
   function resetExpProjectAccordion(panel) {
       if (!panel) return;
@@ -119,39 +234,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 
-  initExpProjectAccordions(document.getElementById('experience'));
-
-  experienceCards.forEach(card => {
-      const trigger = card.querySelector('.experience-card-trigger');
-      if (!trigger) return;
-
-      trigger.addEventListener('click', () => {
-          const targetId = card.getAttribute('data-target');
-
-          experienceCards.forEach(c => {
-              c.classList.remove('is-active');
-              const btn = c.querySelector('.experience-card-trigger');
-              if (btn) btn.setAttribute('aria-selected', 'false');
-          });
-
-          experiencePanels.forEach(panel => panel.classList.remove('active'));
-
-          card.classList.add('is-active');
-          trigger.setAttribute('aria-selected', 'true');
-
-          const targetPanel = document.getElementById(targetId);
-          if (targetPanel) {
-              targetPanel.classList.add('active');
-              resetExpProjectAccordion(targetPanel);
-              if (window.innerWidth <= 768) {
-                  setTimeout(() => {
-                      targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }, 150);
-              }
-          }
-      });
-  });
-  
   // Typing animation
   const textArray = [
       "build scalable applications...", 
